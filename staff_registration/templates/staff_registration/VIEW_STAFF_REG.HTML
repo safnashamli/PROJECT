@@ -1,0 +1,35 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Staff</title>
+</head>
+<body>
+	<center><table border="2">
+		<h1>STAFF REGISTRATION</h1>
+		<tr>
+			<th>Full Name</th>
+			<th>Email</th>
+			<th>DOB</th>
+			<th>Department</th>
+			<th>Status</th>
+			<th></th>
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{ i.full_name }}</td>
+			<td>{{ i.email }}</td>
+			<td>{{ i.dob }}</td>
+			<td>{{ i.department }}</td>
+			<td>{{ i.status }}</td>
+			<td><a href="">Verified</a></td>
+
+		</tr>
+        {% endfor %}
+    </center>
+	</table>
+
+</body>
+</html>
+{% endblock %}

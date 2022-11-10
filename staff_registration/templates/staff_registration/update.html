@@ -1,0 +1,46 @@
+{% extends 'temp/admin.html'%}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update StaffRegistration</title>
+</head>
+<body>
+<center><h1> UPDATE STAFF</h1></center>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+			<tr>
+				<th>Full Name:</th>
+				<td><input type="text" name="fname" value="{{ kk.full_name }}"></td>
+			</tr>
+			<tr>
+				<th>Email:</th>
+				<td><input type="mail" name="Email" value="{{ kk.email }}"></td>
+			</tr>
+			<tr>
+				<th>DOB:</th>
+				<td><input type="Date" name="DOB" value="{{ kk.dob }}"></td>
+			</tr>
+			<tr>
+				<th>Department:</th>
+				<td><input type="text" name="Dpt" value="={{ kk.department }}"></td>
+			</tr>
+			<tr>
+				<th>User name:</th>
+				<td><input type="text" name="uname" value="{{ kk.username }}"></td>
+			</tr>
+			<tr>
+				<th>Password:</th>
+				<td><input type="Password" name="paswd" value="={{ kk.password }}"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="VERIFY"></td>
+			</tr>
+        </table>
+    </form>
+</body>
+</html>
+{% endblock %}
