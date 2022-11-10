@@ -1,0 +1,36 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Table</title>
+</head>
+<body>
+	<center><h1> TIME TABLE VIEW</h1></center>
+	<form method="post">
+        {% csrf_token %} }
+		<table align="center">
+	<tr>
+				<th>Time Table</th>
+				<td><input type="file" name="ttb"></td>
+			</tr>
+			<tr>
+				<th>Date</th>
+				<td><input type="Date" name="dt"></td>
+			</tr>
+			<tr>
+				<th>Time</th>
+				<td><input type="Time" name="tm"></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="ADD"></td>
+			</tr>
+        </table>
+    </form>
+
+</body>
+</html>
+{% endblock %}
