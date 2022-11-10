@@ -1,0 +1,34 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seating Arrangement</title>
+</head>
+<body>
+	<center><table border="2">
+		<h1>SEATING ARRANGEMENT</h1>
+		<tr>
+			<th>Full Name</th>
+			<th>Reg.No</th>
+			<th>Room No</th>
+			<th>Seat No</th>
+			<th>Date</th>
+			<th>Time</th>
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{ i.stud_name }}</td>
+			<td>{{ i.roll_no }}</td>
+			<td>{{ i.class_no }}</td>
+			<td>{{ i.seat_no }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+            {% endfor %}
+		</tr></center>
+	</table>
+
+</body>
+</html>
+{% endblock %}
