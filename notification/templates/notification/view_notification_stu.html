@@ -1,0 +1,31 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notification</title>
+</head>
+<body>
+<center><table border="2">
+		<h1>NOTIFICATION</h1>
+		<tr>
+			<th>Notification</th>
+			<th>Date</th>
+			<th>Time</th>
+
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{ i.notification }}</td>
+			<td>{{i.date }}</td>
+			<td>{{ i.time }}</td>
+            {% endfor %}
+		</tr>
+</table>
+    </center>
+
+</body>
+</html>
+{% endblock %}

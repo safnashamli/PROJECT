@@ -1,0 +1,29 @@
+{% extends 'temp/staff.html' %}
+{% block base%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification</title>
+</head>
+<body>
+	<center><table border="2">
+		<h1>NOTIFICATION</h1>
+		<tr>
+			<th>Notification</th>
+			<th>Date</th>
+			<th>Time</th>
+			
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{ i.notification }}</td>
+			<td>{{i.date }}</td>
+			<td>{{ i.time }}</td>
+            {% endfor %}
+		</tr>
+    </center>
+	</table>
+
+</body>
+</html>
+{% endblock %}
