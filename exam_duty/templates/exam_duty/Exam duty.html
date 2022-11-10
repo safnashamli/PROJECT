@@ -1,0 +1,43 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXAM DUTY</title>
+</head>
+<body>
+	<center><h1> EXAM DUTY</h1></center>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+			<tr>
+				<th>Staff Name</th>
+				<td><select name="stf">
+                    {% for i in objval %}
+                    <option value="{{ i.staff_id }}">{{ i.full_name }}</option>
+                    {% endfor %}
+                </select> </td>
+			</tr>
+			<tr>
+				<th>Room No</th>
+				<td><input type="text" name="Rmn"></td>
+			</tr>
+			<tr>
+				<th>Date</th>
+				<td><input type="Date" name="dt"></td>
+			</tr>
+			<tr>
+				<th>Time</th>
+				<td><input type="Time" name="tm"></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="VERIFY"></td>
+			</tr>
+        </table>
+    </form>
+
+{% endblock %}
+</body>
+</html>
